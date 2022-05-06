@@ -1,0 +1,42 @@
+/* Kullanacağımız font için Google Font'u iport edelim. */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.title{
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 10px 0 30px;
+    text-transform: uppercase;
+}
+
+.container{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+max-width: 1000px;
+background: #E0C9A6;
+border-radius: 10px;
+}
+
+.container img{
+    object-fit: cover;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+}
