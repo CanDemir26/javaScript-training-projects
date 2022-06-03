@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+
+}
+ /* Fotoğrafların stil özelliklerini belirleyelim. */
+.panel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    flex: 0.5;
+    position: relative;
+    border-radius: 40px;
+    margin: 10px;
+    /* Fotoğraflara tıklandığında devreye girecek geçiş animasyonunu belirleyelim. */
+    transition: flex 0.7s ease-in;
+}
+
+/* Fotoğrafalar içerisindeki açıklamaların stil özelliklerini belirleyelim. */
+.panel h3{
+    position: absolute;
+    font-size: 3rem;
+    color: #fff;
+    bottom: 40px;
+    left: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+}
+
+/* Responsive görünmesi için kullanacağımız class'ı ekleyelim. */
+@media screen and (max-width:600px) {
+    .panel:nth-child(4),
+    .panel:nth-child(5){
+        display: none;
+    }
+}
