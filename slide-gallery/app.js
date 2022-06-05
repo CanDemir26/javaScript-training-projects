@@ -1,3 +1,5 @@
+//Araç modellerini,bilgilerini ve linkleri nesne şeklinde tanımlayalım.
+
 var models = [
     {
         name : 'Bmw 418d',
@@ -18,16 +20,26 @@ var models = [
     }
 ];
 
+//Fotoğrafların sırayla gösterilmesi için index belirleyelim.
+
 var index = 0;
+// Model sayısının uzunluğunu tanımlayalım. Hesaplama yaparken işimize yarayacak.
 var slaytCount = models.length;
+
+//Index parametresini showSlide fonksiyonuna gönderelim.
 
 showSlide(index);
 
+// Önceki fotoğrafa geçmek için sayfaya eklediğimiz butonu kullanalım. Butona eventListener ekleyelim ve her tıklandığında index numarasını bir 
+// azaltarak önceki fotoğrafa geçelim.
 document.querySelector('.fa-arrow-left').addEventListener('click',function(){
     index--;
     showSlide(index);
     console.log(index);
 });
+
+// Sonraki fotoğrafa geçmek için sayfaya eklediğimiz bir diğer butonu kullanalım. Butona eventListener ekleyelim ve her tıklandığında index numarasını bir 
+// arttırarak sonraki fotoğrafa geçelim.
 
 document.querySelector('.fa-arrow-right').addEventListener('click',function(){
     index++;
@@ -35,7 +47,8 @@ document.querySelector('.fa-arrow-right').addEventListener('click',function(){
     console.log(index);    
 });
 
-
+//showSlide fonksiyonu ile index parametresini kullanarak fotoğraflar hangi fotoğrafa geçeceğimizi belirlemek için
+//slaytCount ile işlem yapalım.
 function showSlide(i){
 
     index = i;
@@ -46,7 +59,7 @@ function showSlide(i){
     if(i >= slaytCount){
         index =0;
     }
-
+//Sayfamızdaki araç bilgilerini içeren nesneleri çağıralım.
     document.querySelector('.card-title').textContent = models[index].name;
 
     document.querySelector('.card-img-top').setAttribute('src',models[index].image);
