@@ -1,11 +1,14 @@
 // elemanlarımızı seçelim
+
 const sec = document.querySelector(".secs");
 const min = document.querySelector(".mins");
 const hours = document.querySelector(".hours");
 
 // akrep,yelkovan ve saniye elemanlarını Date methodu ile
 //birleştirerek,elemanların kaç derecelik açıyla hareket edeceğini hesaplayalım.
+
 function tikTak(){
+    
     let second = new Date().getSeconds();
     let minute = new Date().getMinutes();
     let hour = new Date().getHours();
