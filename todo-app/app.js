@@ -13,7 +13,6 @@ temizleButonu.addEventListener("click", elemanlariSil);
 // Fonksiyonlar
 function elemanEkle() {
  
-    
     // Eğer input kısmı null ise uyarı verilmesi
     if (girilenGorev.value == "")      
         alert("lutfen değer giriniz");
@@ -21,8 +20,7 @@ function elemanEkle() {
     // input kısmı null değilse aşağıdaki işlemler yapılır
     else {
         
-        
-        // li elementini seçerek li değişkenini ata
+         // li elementini seçerek li değişkenini ata
         var li = document.createElement("li");
         
         // li değişkeninin açıklamasını inputa yazılan yazıya eşitle
