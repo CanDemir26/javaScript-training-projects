@@ -1,0 +1,33 @@
+p{
+    color: #fff;
+    border-radius: 10px;
+    padding: 3px;
+    padding-right: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+ }
+
+ .skill1{
+     margin: 5px;
+ }
+
+ input{
+     width: 18rem;
+ }
+
+ .skillR{
+display: none;
+ }
+
+ blockquote{
+     font-size: small;
+     color: #D3D3D3;
+     margin-top: 10px;
+ }
+
+ ::placeholder{
+    font-size: small;
+    color:purple;
+
+ }
+
